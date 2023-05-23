@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Account registration form</title>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    <title>Educational registration form</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <style>
       html, body {
@@ -13,260 +13,150 @@
       margin: 0;
       outline: none;
       font-family: Roboto, Arial, sans-serif;
-      font-size: 14px;
-      color: #666;
+      font-size: 16px;
+      color: #eee;
       }
-      h1 {
-      margin: 0;
+      body {
+      background: url("/uploads/media/default/0001/01/b5edc1bad4dc8c20291c8394527cb2c5b43ee13c.jpeg") no-repeat center;
+      background-size: cover;
+      }
+      h1, h2 {
+      text-transform: uppercase;
       font-weight: 400;
       }
-      h3 {
-      margin: 12px 0;
-      color: #8ebf42;
+      h2 {
+      margin: 0 0 0 8px;
       }
       .main-block {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: #fff;
+      height: 100%;
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.5); 
+      }
+      .left-part, form {
+      padding: 25px;
+      }
+      .left-part {
+      text-align: center;
+      }
+      .fa-graduation-cap {
+      font-size: 72px;
       }
       form {
-      width: 100%;
-      padding: 20px;
+      background: rgba(0, 0, 0, 0.7); 
       }
-      fieldset {
-      border: none;
-      border-top: 1px solid #8ebf42;
-      }
-      .account-details, .personal-details {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      }
-      .account-details >div, .personal-details >div >div {
+      .title {
       display: flex;
       align-items: center;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       }
-      .account-details >div, .personal-details >div, input, label {
-      width: 100%;
-      }
-      label {
-      padding: 0 5px;
-      text-align: right;
-      vertical-align: middle;
-      }
-      input {
-      padding: 5px;
-      vertical-align: middle;
-      }
-      .checkbox {
-      margin-bottom: 10px;
-      }
-      select, .children, .gender, .bdate-block {
-      width: calc(100% + 26px);
-      padding: 5px 0;
-      }
-      select {
-      background: transparent;
-      }
-      .gender input {
-      width: auto;
-      } 
-      .gender label {
-      padding: 0 5px 0 0;
-      } 
-      .bdate-block {
+      .info {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       }
-      .birthdate select.day {
-      width: 35px;
+      input, select {
+      padding: 5px;
+      margin-bottom: 30px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #eee;
       }
-      .birthdate select.mounth {
-      width: calc(100% - 94px);
+      input::placeholder {
+      color: #eee;
       }
-      .birthdate input {
-      width: 38px;
-      vertical-align: unset;
+      option:focus {
+      border: none;
       }
-      .checkbox input, .children input {
-      width: auto;
-      margin: -2px 10px 0 0;
+      option {
+      background: black; 
+      border: none;
+      }
+      .checkbox input {
+      margin: 0 10px 0 0;
+      vertical-align: middle;
       }
       .checkbox a {
-      color: #8ebf42;
+      color: #26a9e0;
       }
       .checkbox a:hover {
-      color: #82b534;
+      color: #85d6de;
+      }
+      .btn-item, button {
+      padding: 10px 5px;
+      margin-top: 20px;
+      border-radius: 5px; 
+      border: none;
+      background: #26a9e0; 
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+      }
+      .btn-item {
+      display: inline-block;
+      margin: 20px 5px 0;
       }
       button {
       width: 100%;
-      padding: 10px 0;
-      margin: 10px auto;
-      border-radius: 5px; 
-      border: none;
-      background: #8ebf42; 
-      font-size: 14px;
-      font-weight: 600;
-      color: #fff;
       }
-      button:hover {
-      background: #82b534;
+      button:hover, .btn-item:hover {
+      background: #85d6de;
       }
       @media (min-width: 568px) {
-      .account-details >div, .personal-details >div {
-      width: 50%;
+      html, body {
+      height: 100%;
       }
-      label {
-      width: 40%;
+      .main-block {
+      flex-direction: row;
+      height: calc(100% - 50px);
       }
-      input {
-      width: 60%;
-      }
-      select, .children, .gender, .bdate-block {
-      width: calc(60% + 16px);
+      .left-part, form {
+      flex: 1;
+      height: auto;
       }
       }
     </style>
   </head>
   <body>
     <div class="main-block">
-    <form action="/">
-      <h1>Create a free account</h1>
-      <fieldset>
-        <legend>
-          <h3>Account Details</h3>
-        </legend>
-        <div  class="account-details">
-          <div><label>Email*</label><input type="text" name="name" required></div>
-          <div><label>Password*</label><input type="password" name="name" required></div>
-          <div><label>Repeat email*</label><input type="text" name="name" required></div>
-          <div><label>Repeat password*</label><input type="password" name="name" required></div>
+      <div class="left-part">
+        <i class="fas fa-graduation-cap"></i>
+        <h1>Register to our courses</h1>
+        <p>W3docs provides free learning materials for programming languages like HTML, CSS, Java Script, PHP etc.</p>
+        <div class="btn-group">
+          <a class="btn-item" href="https://www.w3docs.com/learn-html.html">Learn HTML</a>
+          <a class="btn-item" href="https://www.w3docs.com/quiz/#">Select Quiz</a>
         </div>
-      </fieldset>
-      <fieldset>
-        <legend>
-          <h3>Personal Details</h3>
-        </legend>
-        <div  class="personal-details">
-          <div>
-            <div><label>Name*</label><input type="text" name="name" required></div>
-            <div><label>Phone*</label><input type="text" name="name" required></div>
-            <div><label>Street</label><input type="text" name="name"></div>
-            <div><label>City*</label><input type="text" name="name" required></div>
-            <div>
-              <label>Country*</label>  
-              <select>
-                <option value=""></option>
-                <option value="Armenia">Armenia</option>
-                <option value="Russia">Russia</option>
-                <option value="Germany">Germany</option>
-                <option value="France">France</option>
-                <option value="USA">USA</option>
-                <option value="UK">UK</option>
-              </select>
-            </div>
-            <div><label>Website</label><input type="text" name="name"></div>
-          </div>
-          <div>
-            <div>
-              <label>Gender*</label>
-              <div class="gender">
-                <input type="radio" value="none" id="male" name="gender" required/>
-                <label for="male" class="radio">Male</label>
-                <input type="radio" value="none" id="female" name="gender" required/>
-                <label for="female" class="radio">Female</label>
-              </div>
-            </div>
-            <div class="birthdate">
-              <label>Birthdate*</label>
-              <div class="bdate-block">
-                <select class="day" required>
-                  <option value=""></option>
-                  <option value="01">01</option>
-                  <option value="02">02</option>
-                  <option value="03">03</option>
-                  <option value="04">04</option>
-                  <option value="05">05</option>
-                  <option value="06">06</option>
-                  <option value="07">07</option>
-                  <option value="08">08</option>
-                  <option value="09">09</option>
-                  <option value="10">10</option>
-                  <option value="11">11</option>
-                  <option value="12">12</option>
-                  <option value="13">13</option>
-                  <option value="14">14</option>
-                  <option value="15">15</option>
-                  <option value="16">16</option>
-                  <option value="17">17</option>
-                  <option value="18">18</option>
-                  <option value="19">19</option>
-                  <option value="20">20</option>
-                  <option value="21">21</option>
-                  <option value="22">22</option>
-                  <option value="23">23</option>
-                  <option value="24">24</option>
-                  <option value="25">25</option>
-                  <option value="26">26</option>
-                  <option value="27">27</option>
-                  <option value="28">28</option>
-                  <option value="29">29</option>
-                  <option value="30">30</option>
-                  <option value="31">31</option>
-                </select>
-                <select class="mounth" required>
-                  <option value=""></option>
-                  <option value="January">January</option>
-                  <option value="February">February</option>
-                  <option value="March">March</option>
-                  <option value="April">April</option>
-                  <option value="May">May</option>
-                  <option value="June">June</option>
-                  <option value="July">July</option>
-                  <option value="August">August</option>
-                  <option value="September">September</option>
-                  <option value="October">October</option>
-                  <option value="November">November</option>
-                  <option value="December">December</option>
-                </select>
-                <input type="text" name="name" required>
-              </div>
-            </div>
-            <div>
-              <label>Nationality*</label>              
-              <select required>
-                <option value=""></option>
-                <option value="Armenian">Armenian</option>
-                <option value="Russian">Russian</option>
-                <option value="German">German</option>
-                <option value="French">French</option>
-                <option value="American">American</option>
-                <option value="English">English</option>
-              </select>
-            </div>
-            <div>
-              <label>Children*</label>
-              <div class="children"><input type="checkbox" name="name" required></div>
-            </div>
-          </div>
+      </div>
+      <form action="/">
+        <div class="title">
+          <i class="fas fa-pencil-alt"></i> 
+          <h2>Register here</h2>
         </div>
-      </fieldset>
-      <fieldset>
-        <legend>
-          <h3>Terms and Mailing</h3>
-        </legend>
-        <div  class="terms-mailing">
-          <div class="checkbox">
-            <input type="checkbox" name="checkbox"><span>I accept the <a href="https://www.w3docs.com/privacy-policy">Privacy Policy for W3Docs.</a></span>
-          </div>
-          <div class="checkbox">
-            <input type="checkbox" name="checkbox"><span>I want to recelve personallzed offers by your site</span>
-          </div>
-      </fieldset>
-      <button type="submit" href="/">Submit</button>
-    </form>
-    </div> 
+        <div class="info">
+          <input class="fname" type="text" name="name" placeholder="Full name">
+          <input type="text" name="name" placeholder="Email">
+          <input type="text" name="name" placeholder="Phone number">
+          <input type="password" name="name" placeholder="Password">
+          <select>
+            <option value="course-type" selected>Course type*</option>
+            <option value="short-courses">Short courses</option>
+            <option value="featured-courses">Featured courses</option>
+            <option value="undergraduate">Undergraduate</option>
+            <option value="diploma">Diploma</option>
+            <option value="certificate">Certificate</option>
+            <option value="masters-degree">Masters degree</option>
+            <option value="postgraduate">Postgraduate</option>
+          </select>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="checkbox"><span>I agree to the <a href="https://www.w3docs.com/privacy-policy">Privacy Poalicy for W3Docs.</a></span>
+        </div>
+        <button type="submit" href="/">Submit</button>
+      </form>
+    </div>
   </body>
 </html>
