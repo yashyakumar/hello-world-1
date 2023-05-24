@@ -1,161 +1,166 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Educational registration form</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <title>Online Feedback Form</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <style>
       html, body {
       min-height: 100%;
       }
-      body, div, form, input, select, p { 
+      body, div, form, input, p { 
       padding: 0;
       margin: 0;
       outline: none;
       font-family: Roboto, Arial, sans-serif;
-      font-size: 16px;
-      color: #eee;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
       }
-      body {
-      background: url("/uploads/media/default/0001/01/b5edc1bad4dc8c20291c8394527cb2c5b43ee13c.jpeg") no-repeat center;
-      background-size: cover;
-      }
-      h1, h2 {
-      text-transform: uppercase;
+      h1 {
       font-weight: 400;
       }
-      h2 {
-      margin: 0 0 0 8px;
+      h4 {
+      margin: 22px 0 4px;
+      color: #095484;
       }
-      .main-block {
+      .testbox {
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100%;
-      padding: 25px;
-      background: rgba(0, 0, 0, 0.5); 
-      }
-      .left-part, form {
-      padding: 25px;
-      }
-      .left-part {
-      text-align: center;
-      }
-      .fa-graduation-cap {
-      font-size: 72px;
+      height: inherit;
+      padding: 3px;
       }
       form {
-      background: rgba(0, 0, 0, 0.7); 
+      width: 100%;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px #ccc; 
       }
-      .title {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-      }
-      .info {
-      display: flex;
-      flex-direction: column;
-      }
-      input, select {
+      input {
+      width: calc(100% - 10px);
       padding: 5px;
-      margin-bottom: 30px;
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid #eee;
-      }
-      input::placeholder {
-      color: #eee;
-      }
-      option:focus {
-      border: none;
-      }
-      option {
-      background: black; 
-      border: none;
-      }
-      .checkbox input {
-      margin: 0 10px 0 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
       vertical-align: middle;
       }
-      .checkbox a {
-      color: #26a9e0;
+      input:hover, textarea:hover {
+      outline: none;
+      border: 1px solid #095484;
       }
-      .checkbox a:hover {
-      color: #85d6de;
+      .first-name {
+      margin-bottom: 22px;
       }
-      .btn-item, button {
-      padding: 10px 5px;
-      margin-top: 20px;
-      border-radius: 5px; 
-      border: none;
-      background: #26a9e0; 
-      text-decoration: none;
-      font-size: 15px;
+      span {
+      color: red;
+      }
+      th, td {
+      width: 21%;
+      padding: 15px 0;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+      vertical-align: unset;
+      line-height: 18px;
       font-weight: 400;
-      color: #fff;
+      word-break: break-all;
       }
-      .btn-item {
-      display: inline-block;
-      margin: 20px 5px 0;
+      .first-col {
+      width: 16%;
+      text-align: left;
       }
-      button {
+      table {
       width: 100%;
       }
-      button:hover, .btn-item:hover {
-      background: #85d6de;
+      textarea {
+      width: calc(100% - 6px);
+      }
+      .btn-block {
+      margin-top: 20px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      -webkit-border-radius: 5px; 
+      -moz-border-radius: 5px; 
+      border-radius: 5px; 
+      background-color: #095484;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background-color: #0666a3;
       }
       @media (min-width: 568px) {
-      html, body {
-      height: 100%;
-      }
-      .main-block {
-      flex-direction: row;
-      height: calc(100% - 50px);
-      }
-      .left-part, form {
-      flex: 1;
-      height: auto;
+      th, td {
+      word-break: keep-all;
       }
       }
     </style>
   </head>
   <body>
-    <div class="main-block">
-      <div class="left-part">
-        <i class="fas fa-graduation-cap"></i>
-        <h1>Register to our courses</h1>
-        <p>W3docs provides free learning materials for programming languages like HTML, CSS, Java Script, PHP etc.</p>
-        <div class="btn-group">
-          <a class="btn-item" href="https://www.w3docs.com/learn-html.html">Learn HTML</a>
-          <a class="btn-item" href="https://www.w3docs.com/quiz/#">Select Quiz</a>
-        </div>
-      </div>
+    <div class="testbox">
       <form action="/">
-        <div class="title">
-          <i class="fas fa-pencil-alt"></i> 
-          <h2>Register here</h2>
+        <h1>Online Feedback Form</h1>
+        <p>Thank you for taking the time to fill in our online feedback form. By providing us your feedback, you are helping us understand what we do well and what improvements we need to implement.</p>
+        <h4>Name</h4>
+        <input class="first-name" type="text" name="name" placeholder="First" />
+        <input type="text" name="name" placeholder="Last" />
+        <h4>Email<span>*</span></h4>
+        <input type="text"/>
+        <h4>How satisfied were you with:<span>*</span></h4>
+        <table>
+          <tr>
+            <th class="first-col"></th>
+            <th>Very Satisfied</th>
+            <th>Satisfied</th>
+            <th>Unsatisfied</th>
+            <th>Very Unsatisfied</th>
+          </tr>
+          <tr>
+            <td class="first-col">Key point #1</td>
+            <td><input type="radio" value="none" name="point#1" /></td>
+            <td><input type="radio" value="none" name="point#1” /></td>
+            <td><input type="radio" value="none" name="point#1" /></td>
+            <td><input type="radio" value="none" name="point#1" /></td>
+          </tr>
+          <tr>
+            <td class="first-col">Key point #2</td>
+            <td><input type="radio" value="none" name="point#2" /></td>
+            <td><input type="radio" value="none" name="point#2" /></td>
+            <td><input type="radio" value="none" name="point#2" /></td>
+            <td><input type="radio" value="none" name="point#2" /></td>
+          </tr>
+          <tr>
+            <td class="first-col">Key point #3</td>
+            <td><input type="radio" value="none" name="point#3" /></td>
+            <td><input type="radio" value="none" name="point#3" /></td>
+            <td><input type="radio" value="none" name="point#3" /></td>
+            <td><input type="radio" value="none" name="point#3" /></td>
+          </tr>
+          <tr>
+            <td class="first-col">Key point #4</td>
+            <td><input type="radio" value="none" name="point#4" /></td>
+            <td><input type="radio" value="none" name="point#4" /></td>
+            <td><input type="radio" value="none" name="point#4" /></td>
+            <td><input type="radio" value="none" name="point#4" /></td>
+          </tr>
+          <tr>
+            <td class="first-col">Key point #5</td>
+            <td><input type="radio" value="none" name="point#5" /></td>
+            <td><input type="radio" value="none" name="point#5" /></td>
+            <td><input type="radio" value="none" name="point#5" /></td>
+            <td><input type="radio" value="none" name="point#5" /></td>
+          </tr>
+        </table>
+        <h4>Feel free to add any other comments or suggestions:</h4>
+        <textarea rows="5"></textarea>
+        <small>* The information given within the Feedback Form will be used for service improvement only and are strictly confidential.</small>
+        <div class="btn-block">
+          <button type="submit" href="/">Send Feedback</button>
         </div>
-        <div class="info">
-          <input class="fname" type="text" name="name" placeholder="Full name">
-          <input type="text" name="name" placeholder="Email">
-          <input type="text" name="name" placeholder="Phone number">
-          <input type="password" name="name" placeholder="Password">
-          <select>
-            <option value="course-type" selected>Course type*</option>
-            <option value="short-courses">Short courses</option>
-            <option value="featured-courses">Featured courses</option>
-            <option value="undergraduate">Undergraduate</option>
-            <option value="diploma">Diploma</option>
-            <option value="certificate">Certificate</option>
-            <option value="masters-degree">Masters degree</option>
-            <option value="postgraduate">Postgraduate</option>
-          </select>
-        </div>
-        <div class="checkbox">
-          <input type="checkbox" name="checkbox"><span>I agree to the <a href="https://www.w3docs.com/privacy-policy">Privacy Poalicy for W3Docs.</a></span>
-        </div>
-        <button type="submit" href="/">Submit</button>
       </form>
     </div>
   </body>
